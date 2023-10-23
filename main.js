@@ -1,24 +1,70 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+function calculer() {
+  let a = document.getElementById("output").value;
+  let b = eval(a);
+  document.getElementById("output").value = b;
+}
+//fonction qui affiche la valeur
+function afficher(val) {
+  document.getElementById("output").value += val;
+}
+//fonction qui efface l'écran
+function effacer() {
+  document.getElementById("output").value = "";
+}
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+let isMoving = false;
+let isMovingTL = false;
+let isMovingTY = false;
 
-setupCounter(document.querySelector('#counter'))
+function moveTd() {
+  if (!isMoving) {
+    isMoving = true;
+    const button = document.getElementById("move");
+    const originalPosition = button.style.transform;
+
+    button.style.transform = "translateY(100px)";
+
+    setTimeout(() => {
+      button.style.transform = "translateX(100px)";
+    }, 500);
+
+    setTimeout(() => {
+      button.style.transform = originalPosition;
+      isMoving = false;
+    }, 2000); // Revenir à la position d'origine après 30 secondes
+  }
+}
+
+function moveTL(element) {
+  if (!isMoving) {
+    const originalPosition = element.style.transform;
+    element.style.transform = "translateY(-100px)";
+
+    setTimeout(() => {
+      element.style.transform = "translateX(-100px)";
+    }, 500);
+
+    setTimeout(() => {
+      element.style.transform = originalPosition;
+    }, 2000); // Revenir à la position d'origine après 2 secondes
+  }
+}
+
+function moveTY() {
+  if (!isMoving) {
+    isMovingTY = true;
+    const button = document.getElementById("output");
+    const originalPosition = button.style.transform;
+
+    button.style.transform = "translateY(-100px)";
+
+    setTimeout(() => {
+      button.style.transform = "translateX(-100px)";
+    }, 500);
+
+    setTimeout(() => {
+      button.style.transform = originalPosition;
+      isMovingTY = false;
+    }, 2000); // Revenir à la position d'origine après 30 secondes
+  }
+}

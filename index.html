@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite Appi</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      media="screen, print, handheld"
+      type="text/css"
+      href="style.css"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <section id="calculator-container">
+      <table>
+        <tr>
+          <td class="moveable" onmouseover="moveTL(this)">
+            <button onclick="afficher('+')">+</button>
+          </td>
+          <td class="moveable" onmouseover="moveTL(this)"><button onclick="afficher('-')">-</button></td>
+          <td><button onclick="afficher('*')">*</button></td>
+          <td><button onclick="afficher('/')">/</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="afficher('1')">1</button></td>
+          <td><button onclick="afficher('2')">2</button></td>
+          <td><button onclick="afficher('3')">3</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="afficher('4')">4</button></td>
+          <td><button onclick="afficher('5')">5</button></td>
+          <td><button onclick="afficher('6')">6</button></td>
+        </tr>
+        <tr>
+          <td colspan="3"><input id="output"onmouseover="moveTY()" /></td>
+          <td><button onclick="effacer()">c</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="afficher('7')">7</button></td>
+          <td><button onclick="afficher('8')">8</button></td>
+          <td><button onclick="afficher('9')">9</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="afficher('.')">.</button></td>
+          <td><button onclick="afficher('0')">0</button></td>
+          <td id="move" onmouseover="moveTd()">
+            <button onclick="calculer()">=</button>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
