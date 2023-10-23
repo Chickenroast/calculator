@@ -1,22 +1,78 @@
 td button {
   width: 100%;
-  background-color: green;
-  opacity: 0.5;
+  height: 100%;
+  background-color: #190482;
+  color: white;
 }
 
 table {
   width: 100%;
+  margin: 25px;
+  justify-content: center;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   margin: 0;
 }
 
 #calculator-container {
-  text-align: center;
-  width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  #calculator-container {
+    position: absolute;
+    width: 100vh;
+    height: 30%;
+  }
+}
+
+footer {
+  background-color: #ffdfdf;
+  width: 100%;
+}
+
+h1 {
+  font-family: Teko;
+  font-weight: bold;
+  font-size: 8vw;
+  color: #190482;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: Nunito;
+  font-weight: normal;
+  color: black;
+  text-transform: uppercase;
+  font-size: 42px;
+}
+
+a {
+  background: magenta;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: monospace;
+}
+
+.hero__video video {
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
+  z-index: 2;
 }
