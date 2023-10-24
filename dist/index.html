@@ -7,91 +7,53 @@
       rel="stylesheet"
       media="screen, print, handheld"
       type="text/css"
-      href="data:text/css;base64,dGQgYnV0dG9uIHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDEwMCU7CiAgYmFja2dyb3VuZC1jb2xvcjogIzE5MDQ4MjsKICBjb2xvcjogd2hpdGU7Cn0KCnRhYmxlIHsKICB3aWR0aDogMTAwJTsKICBtYXJnaW46IDI1cHg7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7Cn0KCmJvZHkgewogIGhlaWdodDogMTAwdmg7CiAgbWFyZ2luOiAwOwp9CgojY2FsY3VsYXRvci1jb250YWluZXIgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0b3A6IDUwJTsKICBsZWZ0OiA1MCU7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7Cn0KCkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkgewogICNjYWxjdWxhdG9yLWNvbnRhaW5lciB7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICB3aWR0aDogMTAwdmg7CiAgICBoZWlnaHQ6IDMwJTsKICB9Cn0KCmZvb3RlciB7CiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZGZkZjsKICB3aWR0aDogMTAwJTsKfQoKaDEgewogIGZvbnQtZmFtaWx5OiBUZWtvOwogIGZvbnQtd2VpZ2h0OiBib2xkOwogIGZvbnQtc2l6ZTogOHZ3OwogIGNvbG9yOiAjMTkwNDgyOwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgbGluZS1oZWlnaHQ6IDE7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7Cn0KCmgyIHsKICBmb250LWZhbWlseTogTnVuaXRvOwogIGZvbnQtd2VpZ2h0OiBub3JtYWw7CiAgY29sb3I6IGJsYWNrOwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgZm9udC1zaXplOiA0MnB4Owp9CgphIHsKICBiYWNrZ3JvdW5kOiBtYWdlbnRhOwogIGJvcmRlci1yYWRpdXM6IDNweDsKICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7CiAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgZm9udC1zaXplOiAxOHB4OwogIG1hcmdpbjogMCBhdXRvOwogIHBhZGRpbmc6IDE1cHggMzBweDsKICB0ZXh0LWRlY29yYXRpb246IG5vbmU7CiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICBjb2xvcjogYmxhY2s7CiAgZm9udC1mYW1pbHk6IG1vbm9zcGFjZTsKfQoKLmhlcm9fX3ZpZGVvIHZpZGVvIHsKICBvYmplY3QtZml0OiBjb3ZlcjsKICBoZWlnaHQ6IDUwdmg7CiAgd2lkdGg6IDEwMCU7CiAgei1pbmRleDogMjsKfQo="
+      href="data:text/css;base64,dGQgYnV0dG9uIHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDEwMCU7CiAgYmFja2dyb3VuZC1jb2xvcjogIzE5MDQ4MjsKICBjb2xvcjogd2hpdGU7Cn0KCnRhYmxlIHsKICB3aWR0aDogMTAwJTsKICBtYXJnaW46IDI1cHg7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7Cn0KCmJvZHkgewogIGhlaWdodDogMTAwdmg7CiAgbWFyZ2luOiAwOwp9CgojY2FsY3VsYXRvci1jb250YWluZXIgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0b3A6IDUwJTsKICBsZWZ0OiA1MCU7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7Cn0KCkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkgewogICNjYWxjdWxhdG9yLWNvbnRhaW5lciB7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICB3aWR0aDogMTAwdmg7CiAgICBoZWlnaHQ6IDMwJTsKICB9Cn0KCmgxIHsKICBmb250LWZhbWlseTogVGVrbzsKICBmb250LXdlaWdodDogYm9sZDsKICBmb250LXNpemU6IDh2dzsKICBjb2xvcjogIzE5MDQ4MjsKICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogIGxpbmUtaGVpZ2h0OiAxOwogIG1hcmdpbjogMDsKICBwYWRkaW5nOiAwOwp9CgpoMiB7CiAgZm9udC1mYW1pbHk6IE51bml0bzsKICBmb250LXdlaWdodDogbm9ybWFsOwogIGNvbG9yOiBibGFjazsKICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogIGZvbnQtc2l6ZTogNDJweDsKfQoKYSB7CiAgYmFja2dyb3VuZDogbWFnZW50YTsKICBib3JkZXItcmFkaXVzOiAzcHg7CiAgZGlzcGxheTogaW5saW5lLWJsb2NrOwogIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmOwogIGZvbnQtd2VpZ2h0OiBib2xkOwogIGZvbnQtc2l6ZTogMThweDsKICBtYXJnaW46IDAgYXV0bzsKICBwYWRkaW5nOiAxNXB4IDMwcHg7CiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgY29sb3I6IGJsYWNrOwogIGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7Cn0KCi5oZXJvX192aWRlbyB2aWRlbyB7CiAgb2JqZWN0LWZpdDogY292ZXI7CiAgaGVpZ2h0OiA1MHZoOwogIHdpZHRoOiAxMDAlOwogIHotaW5kZXg6IDI7Cn0K"
     />
-    <script type="module" crossorigin src="/calculator/assets/index-3cfb730f.js"></script>
+    <script type="module" crossorigin src="/calculator/assets/index-ddcefc99.js"></script>
   </head>
   <body>
-    <div class="hero">
-      <section>
+    <section>
         <h1>SOMETHING is going wrong</h1>
-      </section>
+ </section>
       <div class="hero__video">
         <video autoplay loop muted class="hero-video">
           <source src="/calculator/assets/loading-cc687fe7.mp4" type="video/webm" />
         </video>
       </div>
-      <section class="hero__content" id="calculator-container">
+      <div id="calculator-container">
         <table>
           <tr>
-            <td class="moveable" onmouseover="moveTL(this)">
-              <button onclick="afficher('+'); add()">+</button>
-            </td>
-            <td class="moveable" onmouseover="moveTL(this)">
-              <button onclick="afficher('-'); subtract()">-</button>
-            </td>
-            <td>
-              <button onclick="afficher('*'); multiply()">*</button>
-            </td>
-            <td>
-              <button onclick="afficher('/'); divide()">/</button>
-            </td>
+            <td onmouseover="document.getElementById('output'); moveTd();" id="output">
+                  <input type="text" id="output2" readonly />
+              </td>
           </tr>
           <tr>
-            <td>
-              <button onclick="afficher('1')">1</button>
-            </td>
-            <td>
-              <button onclick="afficher('2')">2</button>
-            </td>
-            <td>
-              <button onclick="afficher('3')">3</button>
-            </td>
+              <td><button role="button" id="btn1">1</button></td>
+              <td><button role="button" id="btn2">2</button></td>
+              <td><button role="button" id="btn3">3</button></td>
+              <td><button role="button" id="btnPlus">+</button></td>
           </tr>
           <tr>
-            <td>
-              <button onclick="afficher('4')">4</button>
-            </td>
-            <td>
-              <button onclick="afficher('5')">5</button>
-            </td>
-            <td>
-              <button onclick="afficher('6')">6</button>
-            </td>
+              <td><button role="button" id="btn4">4</button></td>
+              <td><button role="button" id="btn5">5</button></td>
+              <td><button role="button" id="btn6">6</button></td>
+              <td><button role="button" id="btnMinus">-</button></td>
           </tr>
           <tr>
-            <td colspan="3" onmouseover="moveTd()">
-              <input id="output" />
-            </td>
-            <td>
-              <button onclick="effacer()">c</button>
-            </td>
+              <td><button role="button" id="btn7">7</button></td>
+              <td><button role="button" id="btn8">8</button></td>
+              <td><button role="button" id="btn9">9</button></td>
+              <td><button role="button" id="btnMultiply">*</button></td>
           </tr>
           <tr>
-            <td>
-              <button onclick="afficher('7')">7</button>
-            </td>
-            <td>
-              <button onclick="afficher('8')">8</button>
-            </td>
-            <td>
-              <button onclick="afficher('9')">9</button>
-            </td>
+              <td><button role="button" id="btn0">0</button></td>
+              <td><button role="button" id="btnClear">C</button></td>
+              <td><button role="button" id="btnEquals">=</button></td>
+              <td><button role="button" id="btnDivide">/</button></td>
           </tr>
-          <tr>
-            <td>
-              <button onclick="afficher('.')">.</button>
-            </td>
-            <td>
-              <button onclick="afficher('0')">0</button>
-            </td>
-            <td id="move" onmouseover="moveTd()">
-              <button onclick="calculer()">=</button>
-            </td>
-          </tr>
-        </table>
-      </section>
-    </div>
-    
+      </table>
+      </div>
+  </section>
+  
   </body>
 </html>

@@ -1,4 +1,4 @@
-// L'enfer des déclarations
+// LE CIMETIERE DES GET ELEMENTS BYID XOXOX
 
 document.getElementById("btn1").addEventListener("click", function () {
   appendToOutput("1");
@@ -14,6 +14,7 @@ document.getElementById("btn3").addEventListener("click", function () {
 
 document.getElementById("btnPlus").addEventListener("click", function () {
   appendToOutput("+");
+  moveTy();
 });
 
 document.getElementById("btn4").addEventListener("click", function () {
@@ -50,6 +51,7 @@ document.getElementById("btnMultiply").addEventListener("click", function () {
 
 document.getElementById("btn0").addEventListener("click", function () {
   appendToOutput("0");
+  moveTnull();
 });
 
 document.getElementById("btnClear").addEventListener("click", function () {
@@ -58,6 +60,7 @@ document.getElementById("btnClear").addEventListener("click", function () {
 
 document.getElementById("btnEquals").addEventListener("click", function () {
   calculate();
+  moveTnull();
 });
 
 document.getElementById("btnDivide").addEventListener("click", function () {
@@ -72,7 +75,7 @@ document.getElementById("output2").addEventListener("mouseover", function () {
   moveTd();
 });
 
-// Nos fonctions
+// LA CALCULETTE PAS TRES DEVELOPPE
 
 function appendToOutput(value) {
   document.getElementById("output2").value += value;
@@ -93,8 +96,16 @@ function calculate() {
 }
 
 // FONCTION FOU LE BORDEL lel
-let isMovingTd = false;
+// remarque a moi même trouver comment faire coexister un onmouseover et un click
+//ainsi on pourrais avoir 2 addeventlistener distincs
 
+//ON DECLARE UN POINT D ENTREE
+
+let isMovingTd = false;
+let isMovingTy = false;
+let isMovingTnull = false;
+
+//FONCTION POUR BOUGER LE INPUT
 function moveTd() {
   if (!isMovingTd) {
     isMovingTd = true;
@@ -111,5 +122,51 @@ function moveTd() {
       button.style.transform = originalPosition;
       isMovingTd = false;
     }, 2000);
+  }
+}
+
+//FONCTION POUR BOUGER LE BOUTON +
+function moveTy() {
+  if (!isMovingTd) {
+    isMovingTy = true;
+    const button = document.getElementById("btnPlus");
+    const originalPosition = button.style.transform;
+
+    button.style.transform = "translateY(-150px)";
+
+    setTimeout(() => {
+      button.style.transform = "translateX(-100px)";
+    }, 5000);
+
+    setTimeout(() => {
+      button.style.transform = originalPosition;
+      isMovingTy = false;
+    }, 5000);
+  }
+}
+
+//FONCTION POUR BOUGER LE BOUTON 0 ET =
+function moveTnull() {
+  if (!isMovingTnull) {
+    isMovingTnull = true;
+    const button = document.getElementById("btn0");
+    const button2 = document.getElementById("btnEquals");
+    const originalPosition = button.style.transform;
+    const originalPosition2 = button2.style.transform;
+
+    button.style.transform = "translateY(150px)";
+    button2.style.transform = "translateY(150px)";
+
+    setTimeout(() => {
+      //what is this ?
+      button.style.transform = "translateX(-100px)";
+      button2.style.transform = "translateX(-100px)";
+    }, 5000);
+
+    setTimeout(() => {
+      button.style.transform = originalPosition;
+      button2.style.transform = originalPosition2;
+      isMovingTnull = false;
+    }, 5000);
   }
 }
