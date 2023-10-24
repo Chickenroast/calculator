@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Calculator</title>
@@ -8,7 +9,7 @@
       type="text/css"
       href="data:text/css;base64,dGQgYnV0dG9uIHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDEwMCU7CiAgYmFja2dyb3VuZC1jb2xvcjogIzE5MDQ4MjsKICBjb2xvcjogd2hpdGU7Cn0KCnRhYmxlIHsKICB3aWR0aDogMTAwJTsKICBtYXJnaW46IDI1cHg7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7Cn0KCmJvZHkgewogIGhlaWdodDogMTAwdmg7CiAgbWFyZ2luOiAwOwp9CgojY2FsY3VsYXRvci1jb250YWluZXIgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0b3A6IDUwJTsKICBsZWZ0OiA1MCU7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7Cn0KCkBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkgewogICNjYWxjdWxhdG9yLWNvbnRhaW5lciB7CiAgICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgICB3aWR0aDogMTAwdmg7CiAgICBoZWlnaHQ6IDMwJTsKICB9Cn0KCmZvb3RlciB7CiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZGZkZjsKICB3aWR0aDogMTAwJTsKfQoKaDEgewogIGZvbnQtZmFtaWx5OiBUZWtvOwogIGZvbnQtd2VpZ2h0OiBib2xkOwogIGZvbnQtc2l6ZTogOHZ3OwogIGNvbG9yOiAjMTkwNDgyOwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgbGluZS1oZWlnaHQ6IDE7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7Cn0KCmgyIHsKICBmb250LWZhbWlseTogTnVuaXRvOwogIGZvbnQtd2VpZ2h0OiBub3JtYWw7CiAgY29sb3I6IGJsYWNrOwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgZm9udC1zaXplOiA0MnB4Owp9CgphIHsKICBiYWNrZ3JvdW5kOiBtYWdlbnRhOwogIGJvcmRlci1yYWRpdXM6IDNweDsKICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7CiAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgZm9udC1zaXplOiAxOHB4OwogIG1hcmdpbjogMCBhdXRvOwogIHBhZGRpbmc6IDE1cHggMzBweDsKICB0ZXh0LWRlY29yYXRpb246IG5vbmU7CiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICBjb2xvcjogYmxhY2s7CiAgZm9udC1mYW1pbHk6IG1vbm9zcGFjZTsKfQoKLmhlcm9fX3ZpZGVvIHZpZGVvIHsKICBvYmplY3QtZml0OiBjb3ZlcjsKICBoZWlnaHQ6IDUwdmg7CiAgd2lkdGg6IDEwMCU7CiAgei1pbmRleDogMjsKfQo="
     />
-    <script type="module" crossorigin src="/calculator/main.js"></script>
+    <script type="module" crossorigin src="/calculator/assets/index-3cfb730f.js"></script>
   </head>
   <body>
     <div class="hero">
@@ -18,49 +19,50 @@
           <source src="/calculator/assets/loading-cc687fe7.mp4" type="video/webm" />
         </video>
       </div>
-        <section class="hero__content" id="calculator-container">
-          <table>
-            <tr>
-              <td class="moveable" onmouseover="moveTL(this)">
-                <button onclick="afficher('+')">+</button>
-              </td>
-              <td class="moveable" onmouseover="moveTL(this)"><button onclick="afficher('-')">-</button></td>
-              <td><button onclick="afficher('*')">*</button></td>
-              <td><button onclick="afficher('/')">/</button></td>
-            </tr>
-            <tr>
-              <td><button onclick="afficher('1')">1</button></td>
-              <td><button onclick="afficher('2')">2</button></td>
-              <td><button onclick="afficher('3')">3</button></td>
-            </tr>
-            <tr>
-              <td><button onclick="afficher('4')">4</button></td>
-              <td><button onclick="afficher('5')">5</button></td>
-              <td><button onclick="afficher('6')">6</button></td>
-            </tr>
-            <tr>
-              <td colspan="3"><input id="output" onmouseover="moveTY()" /></td>
-              <td><button onclick="effacer()">c</button></td>
-            </tr>
-            <tr>
-              <td><button onclick="afficher('7')">7</button></td>
-              <td><button onclick="afficher('8')">8</button></td>
-              <td><button onclick="afficher('9')">9</button></td>
-            </tr>
-            <tr>
-              <td><button onclick="afficher('.')">.</button></td>
-              <td><button onclick="afficher('0')">0</button></td>
-              <td id="move" onmouseover="moveTd()">
-                <button onclick="calculer()">=</button>
-              </td>
-            </tr>
-          </table>
-        </section>
-        <footer class="footer">
-
-        </footer>
+      <section class="hero__content" id="calculator-container">
+        <table>
+          <tr>
+            <td class="moveable" onmouseover="moveTL(this)">
+              <button onclick="afficher('+')">+</button>
+            </td>
+            <td class="moveable" onmouseover="moveTL(this)">
+              <button onclick="afficher('-')">-</button>
+            </td>
+            <td><button onclick="afficher('*')">*</button></td>
+            <td><button onclick="afficher('/')">/</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="afficher('1')">1</button></td>
+            <td><button onclick="afficher('2')">2</button></td>
+            <td><button onclick="afficher('3')">3</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="afficher('4')">4</button></td>
+            <td><button onclick="afficher('5')">5</button></td>
+            <td><button onclick="afficher('6')">6</button></td>
+          </tr>
+          <tr>
+            <td colspan="3"><input id="output" onmouseover="moveTY()" /></td>
+            <td><button onclick="effacer()">c</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="afficher('7')">7</button></td>
+            <td><button onclick="afficher('8')">8</button></td>
+            <td><button onclick="afficher('9')">9</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="afficher('.')">.</button></td>
+            <td><button onclick="afficher('0')">0</button></td>
+            <td id="move" onmouseover="moveTd()">
+              <button onclick="calculer()">=</button>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <footer class="footer">
+        <h2>hello</h2>
+      </footer>
     </div>
-    
     
   </body>
 </html>
